@@ -150,7 +150,7 @@ export const SubirFoto: React.FC = () => {
   const handleDownloadProject = async () => {
     try {
       // Hacer la solicitud al backend para generar el proyecto Angular
-      const response = await fetch("http://localhost:4000/generar-proyecto", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/generar-proyecto`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -179,17 +179,6 @@ export const SubirFoto: React.FC = () => {
       console.error("Error en la descarga del proyecto:", error);
     }
   };
-
-
-
-
-
-
-
-
-
-
-
 
 
 

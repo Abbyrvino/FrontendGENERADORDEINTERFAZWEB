@@ -29,7 +29,7 @@ export function UserList() {
     try {
       const token = localStorage.getItem("authToken");
 
-      const response = await fetch("http://localhost:4000/api/auth/usuarios", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/usuarios`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

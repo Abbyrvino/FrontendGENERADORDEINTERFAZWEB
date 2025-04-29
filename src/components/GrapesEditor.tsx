@@ -27,7 +27,7 @@ export default function GrapesEditor() {
 
     let zIndexCounter = 10;
 
-    const socket = io('http://localhost:4000');
+    const socket = io(`${import.meta.env.VITE_API_URL}`);
     socket.emit('join-room', roomId);
 
     const styleEl = document.createElement('style');
